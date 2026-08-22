@@ -13,6 +13,6 @@ export const PRESENTATION_CONFIG = {
         { id: "05-marketing", title: "Marketing Campaign", tag: "30-Day Multi-Channel Campaign" },
         { id: "06-visibility", title: "Brand Visibility", tag: "360° Venue Presence" },
         { id: "07-industries", title: "Potential Partners", tag: "Target Industry Categories" },
-        { id: "08-partnership", title: "Partnership Plans", tag: "Partnership Tiers" }
+        { id: "08-partnership", title: "Partnership Opportunity", tag: "Exclusive Opportunity" }
     ]
 };

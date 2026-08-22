@@ -51,119 +51,107 @@
     },
     {
       "id": "08-partnership",
-      "title": "Partnership Plans",
-      "tag": "Partnership"
+      "title": "Partnership Opportunity",
+      "tag": "Opportunity"
     }
   ],
   "anubhav": {
     "name": "Anubhav Tripathi",
     "title": "Professional MC · Anchor · DJ",
-    "eventsCount": 500,
-    "categories": [
-      "Wedding",
-      "Corporate",
-      "College",
-      "Garba",
-      "Dandiya"
-    ],
-    "instagram": "@annnnnubhav"
+    "handle": "@annnnnubhav",
+    "metrics": "500+ Events Nationwide",
+    "reach": "50K+ Regional Reach"
   },
   "demographics": [
     {
-      "label": "Families",
-      "image": "assets/images/family-audience.webp",
-      "description": "Multi-generational families seeking safe, premium festive cultural entertainment."
+      "category": "Families",
+      "focus": "Multi-generational households, lifestyle & FMCG upgrades"
     },
     {
-      "label": "Students & Youth",
-      "image": "assets/images/students-youth.webp",
-      "description": "18-28 year old trendsetters driving Instagram Reels, stories, and viral social buzz."
+      "category": "Students & Youth",
+      "focus": "18–28 digital natives, social buzz, apparel & tech"
     },
     {
-      "label": "Working Professionals",
-      "image": "assets/images/working-professionals.webp",
-      "description": "High-disposable income households seeking refined and curated festive experiences."
+      "category": "Working Professionals",
+      "focus": "High-disposable income, healthcare, finance & autos"
     },
     {
-      "label": "Business Owners",
-      "image": "assets/images/business-owners.webp",
-      "description": "Regional merchants and community leaders with high commercial purchasing power."
+      "category": "Business Owners",
+      "focus": "Trade leaders, retail heads, commercial buying power"
     }
   ],
-  "visibility": [
-    "Grand Entry Gate Branding",
-    "Main Stage Backdrop",
-    "LED Video Walls",
-    "Wristbands & Passes",
-    "Selfie Zone Installation",
-    "Food Court Branding",
-    "VIP Zone Signage",
-    "Aftermovie Credits"
+  "marketingTimeline": [
+    {
+      "channel": "Digital & Social Influencer",
+      "period": "30 Days Active"
+    },
+    {
+      "channel": "Schools & Colleges Activation",
+      "period": "Campus Passes"
+    },
+    {
+      "channel": "Road Banners & Hoardings",
+      "period": "City Gantries"
+    },
+    {
+      "channel": "Media PR & Official Aftermovie",
+      "period": "4K Production"
+    }
+  ],
+  "visibilityTouchpoints": [
+    "Grand Entry Gate Signage",
+    "Center-Stage Backdrop Logo",
+    "Large LED Screen Airtime",
+    "Selfie Zone Wall Installation",
+    "Sponsor Wristbands on 500+ Attendees",
+    "10×10 Sampling & Experience Stall",
+    "Live MC Mentions & Felicitation",
+    "Permanent 4K Aftermovie Credits"
   ],
   "industries": [
     {
-      "label": "Automobile",
+      "name": "Automobile",
       "icon": "car"
     },
     {
-      "label": "Hospitals & Healthcare",
+      "name": "Hospitals & Healthcare",
       "icon": "hospital"
     },
     {
-      "label": "Colleges",
-      "icon": "graduation"
+      "name": "Colleges & Universities",
+      "icon": "college"
     },
     {
-      "label": "Coaching Institutes",
-      "icon": "book"
+      "name": "Coachings & EdTech",
+      "icon": "coaching"
     },
     {
-      "label": "Food & Beverages",
+      "name": "Food & Hospitality",
       "icon": "food"
     },
     {
-      "label": "Jewellery & Fashion",
-      "icon": "diamond"
+      "name": "Jewellery & Fashion",
+      "icon": "jewellery"
     },
     {
-      "label": "Banking & Finance",
+      "name": "Banking & Finance",
       "icon": "bank"
     }
   ],
-  "tiers": [
-    {
-      "name": "Title Partner",
-      "badge": "Exclusive (1 Available)",
-      "highlight": true,
-      "tagline": "Akbarpur Dandiya Mahotsav Presented by [Your Brand]",
-      "benefits": [
-        "Maximum LED airtime & prime 20×20 booth",
-        "Celebrity stage felicitation",
-        "Top branding across all digital & on-ground assets",
-        "All collaterals + Aftermovie credits"
-      ]
-    },
-    {
-      "name": "Powered By Partner",
-      "badge": "Co-Powered By",
-      "highlight": false,
-      "tagline": "",
-      "benefits": [
-        "Prominent stage branding",
-        "10×10 promotional stall + 10 VIP passes",
-        "Pre-event social media campaigns"
-      ]
-    },
-    {
-      "name": "Associate Partner",
-      "badge": "Supporting",
-      "highlight": false,
-      "tagline": "",
-      "benefits": [
-        "Entry gate signage",
-        "Selfie zone logo presence",
-        "MC stage shoutouts + digital promotion"
-      ]
-    }
-  ]
+  "partnership": {
+    "name": "Powered By Partner",
+    "badge": "Exclusive • 1 Available",
+    "price": "₹30,000",
+    "positioning": "Akbarpur Dandiya Mahotsav 2026 Powered by [Your Brand]",
+    "journey": [
+      "Main Gate",
+      "Stage",
+      "LED Screen",
+      "Audience",
+      "Brand Activation",
+      "Felicitation",
+      "Event Moments"
+    ],
+    "closing": "One Partner. One Night. A Brand Presence People Remember."
+  }
 }

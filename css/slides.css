@@ -819,24 +819,246 @@
     color: #FFFFFF;
 }
 
-/* Slide 8: Partnership Tiers */
-.tier-card-lead {
-    border: 2px solid var(--gold-500) !important;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(18, 18, 24, 0.88) 100%) !important;
-    transform: scale(1.03);
-    box-shadow: var(--shadow-gold), 0 20px 50px rgba(0, 0, 0, 0.7);
+/* Slide 8: Exclusive Single Partnership Opportunity (Powered By Partner) */
+.exclusive-partnership-card {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(14, 14, 20, 0.95) 100%);
+    border: 1.5px solid rgba(212, 175, 55, 0.45);
+    border-radius: var(--radius-md);
+    padding: 22px 28px;
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow-gold), 0 20px 50px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 0.8rem;
+    position: relative;
+    overflow: hidden;
 }
 
-.tier-badge-pill {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--gold-300) 0%, var(--gold-500) 100%);
-    color: #05040a;
-    font-size: 0.68rem;
+.exclusive-partnership-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold-400) 50%, transparent 100%);
+}
+
+/* Card Top: Positioning & Price Header */
+.partnership-hero-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 14px;
+}
+
+.partnership-positioning-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.exclusive-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, var(--gold-400) 0%, var(--gold-500) 100%);
+    color: #060608;
+    font-size: 0.72rem;
     font-weight: 800;
-    padding: 4px 10px;
-    border-radius: 20px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+    padding: 3px 12px;
+    border-radius: var(--radius-full);
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     font-family: 'Space Grotesk', sans-serif;
+    align-self: flex-start;
+}
+
+.positioning-preview-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid var(--gold-hairline);
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+}
+
+.positioning-brand-tag {
+    color: var(--gold-300);
+    font-weight: 800;
+}
+
+.partnership-price-block {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.price-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.price-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    line-height: 1;
+    font-weight: 800;
+    background: linear-gradient(135deg, #FFFFFF 20%, var(--gold-300) 65%, var(--gold-500) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 2px 0;
+}
+
+.price-sub {
+    font-size: 0.72rem;
+    color: var(--gold-400);
+    font-weight: 600;
+}
+
+/* Sponsor Journey Track */
+.sponsor-journey-track {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: var(--radius-sm);
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+
+.journey-step {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
+}
+
+.journey-step-icon {
+    color: var(--gold-400);
+    font-size: 0.85rem;
+}
+
+.journey-arrow {
+    color: var(--gold-500);
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+
+/* 3 Comprehensive Benefit Columns */
+.partnership-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.benefit-category-column {
+    background: rgba(18, 18, 24, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.benefit-category-column:hover {
+    border-color: var(--gold-hairline);
+    background: rgba(212, 175, 55, 0.06);
+    transform: translateY(-2px);
+}
+
+.benefit-column-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.86rem;
+    font-weight: 800;
+    color: var(--gold-300);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.benefit-items-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.benefit-items-list li {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.benefit-items-list li strong {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.benefit-items-list li .check-icon {
+    color: var(--gold-400);
+    font-size: 0.78rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Bottom Closing Statement */
+.partnership-bottom-closing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 12px;
+}
+
+.closing-tagline-statement {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.84rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.closing-tagline-statement span {
+    color: var(--gold-300);
+}
+
+.closing-rate-badge {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--gold-400);
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid var(--gold-hairline);
+    padding: 3px 12px;
+    border-radius: var(--radius-full);
 }
