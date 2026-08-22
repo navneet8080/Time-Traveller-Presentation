@@ -1,0 +1,169 @@
+{
+  "event": {
+    "name": "Akbarpur Dandiya Mahotsav 2026",
+    "date": "15 October 2026",
+    "venue": "Janakpuri Maidan, Akbarpur",
+    "expectedAttendees": "500+",
+    "timing": "6:00 PM Onwards",
+    "format": "Dandiya, Garba, DJ & Food Fest"
+  },
+  "brand": {
+    "name": "Time Travellers",
+    "tagline": "Presented & Curated by",
+    "logo": "assets/logos/Time Travellers final_svg.svg",
+    "logoFallback": "assets/logos/Time Travellers final.png"
+  },
+  "slides": [
+    {
+      "id": "01-cover",
+      "title": "Cover",
+      "tag": "Opening"
+    },
+    {
+      "id": "02-credibility",
+      "title": "Time Travellers in Action",
+      "tag": "Credibility"
+    },
+    {
+      "id": "03-showstopper",
+      "title": "Anubhav Tripathi",
+      "tag": "Showstopper"
+    },
+    {
+      "id": "04-audience",
+      "title": "Target Demographics",
+      "tag": "Audience"
+    },
+    {
+      "id": "05-marketing",
+      "title": "Marketing Campaign",
+      "tag": "Campaign"
+    },
+    {
+      "id": "06-visibility",
+      "title": "Brand Visibility",
+      "tag": "Visibility"
+    },
+    {
+      "id": "07-industries",
+      "title": "Potential Partners",
+      "tag": "Industries"
+    },
+    {
+      "id": "08-partnership",
+      "title": "Partnership Plans",
+      "tag": "Partnership"
+    }
+  ],
+  "anubhav": {
+    "name": "Anubhav Tripathi",
+    "title": "Professional MC · Anchor · DJ",
+    "eventsCount": 500,
+    "categories": [
+      "Wedding",
+      "Corporate",
+      "College",
+      "Garba",
+      "Dandiya"
+    ],
+    "instagram": "@annnnnubhav"
+  },
+  "demographics": [
+    {
+      "label": "Families",
+      "image": "assets/images/family-audience.webp",
+      "description": "Multi-generational families seeking safe, premium festive cultural entertainment."
+    },
+    {
+      "label": "Students & Youth",
+      "image": "assets/images/students-youth.webp",
+      "description": "18-28 year old trendsetters driving Instagram Reels, stories, and viral social buzz."
+    },
+    {
+      "label": "Working Professionals",
+      "image": "assets/images/working-professionals.webp",
+      "description": "High-disposable income households seeking refined and curated festive experiences."
+    },
+    {
+      "label": "Business Owners",
+      "image": "assets/images/business-owners.webp",
+      "description": "Regional merchants and community leaders with high commercial purchasing power."
+    }
+  ],
+  "visibility": [
+    "Grand Entry Gate Branding",
+    "Main Stage Backdrop",
+    "LED Video Walls",
+    "Wristbands & Passes",
+    "Selfie Zone Installation",
+    "Food Court Branding",
+    "VIP Zone Signage",
+    "Aftermovie Credits"
+  ],
+  "industries": [
+    {
+      "label": "Automobile",
+      "icon": "car"
+    },
+    {
+      "label": "Hospitals & Healthcare",
+      "icon": "hospital"
+    },
+    {
+      "label": "Colleges",
+      "icon": "graduation"
+    },
+    {
+      "label": "Coaching Institutes",
+      "icon": "book"
+    },
+    {
+      "label": "Food & Beverages",
+      "icon": "food"
+    },
+    {
+      "label": "Jewellery & Fashion",
+      "icon": "diamond"
+    },
+    {
+      "label": "Banking & Finance",
+      "icon": "bank"
+    }
+  ],
+  "tiers": [
+    {
+      "name": "Title Partner",
+      "badge": "Exclusive (1 Available)",
+      "highlight": true,
+      "tagline": "Akbarpur Dandiya Mahotsav Presented by [Your Brand]",
+      "benefits": [
+        "Maximum LED airtime & prime 20×20 booth",
+        "Celebrity stage felicitation",
+        "Top branding across all digital & on-ground assets",
+        "All collaterals + Aftermovie credits"
+      ]
+    },
+    {
+      "name": "Powered By Partner",
+      "badge": "Co-Powered By",
+      "highlight": false,
+      "tagline": "",
+      "benefits": [
+        "Prominent stage branding",
+        "10×10 promotional stall + 10 VIP passes",
+        "Pre-event social media campaigns"
+      ]
+    },
+    {
+      "name": "Associate Partner",
+      "badge": "Supporting",
+      "highlight": false,
+      "tagline": "",
+      "benefits": [
+        "Entry gate signage",
+        "Selfie zone logo presence",
+        "MC stage shoutouts + digital promotion"
+      ]
+    }
+  ]
+}

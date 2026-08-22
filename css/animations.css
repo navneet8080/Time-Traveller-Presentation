@@ -1,0 +1,63 @@
+/* =========================================================
+   ANIMATIONS, KEYFRAMES & HARDWARE-ACCELERATED TRANSITIONS
+   ========================================================= */
+
+/* Atmospheric Lighting Orb Keyframes */
+@keyframes orbFloat1 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-80px, 70px) scale(1.15); }
+}
+
+@keyframes orbFloat2 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(90px, -60px) scale(1.2); }
+}
+
+/* Ken Burns Slow Cinematic Zoom for Photography */
+.media-kenburns {
+    position: absolute;
+    inset: -10px;
+    background-size: cover;
+    background-position: center;
+    animation: kenBurnsZoom 18s alternate infinite ease-in-out;
+    will-change: transform;
+}
+
+@keyframes kenBurnsZoom {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.08) translate(-10px, -8px); }
+}
+
+/* Staggered Element Entrance Animations */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.65s var(--ease-cinematic), transform 0.65s var(--ease-cinematic);
+    will-change: transform, opacity;
+}
+
+.slide-item.active .reveal-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-item.active .reveal-item:nth-child(1) { transition-delay: 0.08s; }
+.slide-item.active .reveal-item:nth-child(2) { transition-delay: 0.16s; }
+.slide-item.active .reveal-item:nth-child(3) { transition-delay: 0.24s; }
+.slide-item.active .reveal-item:nth-child(4) { transition-delay: 0.32s; }
+.slide-item.active .reveal-item:nth-child(5) { transition-delay: 0.40s; }
+.slide-item.active .reveal-item:nth-child(6) { transition-delay: 0.48s; }
+
+/* Pulse Glow Keyframes */
+@keyframes goldPulse {
+    0%, 100% {
+        box-shadow: 0 0 15px var(--gold-glow);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+    }
+}
+
+.pulse-glow {
+    animation: goldPulse 3s infinite ease-in-out;
+}

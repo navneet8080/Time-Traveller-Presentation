@@ -1,0 +1,842 @@
+/* =========================================================
+   SLIDES SPECIFIC STYLES & LAYOUT VARIATIONS
+   ========================================================= */
+
+/* Slides Container & Base Slide Item */
+.slides-container {
+    position: relative;
+    flex: 1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.slide-item {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 80px 90px 90px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    filter: blur(8px);
+    transform: scale(0.96) translateY(24px);
+    transition: opacity var(--trans-duration) var(--ease-cinematic),
+        transform var(--trans-duration) var(--ease-cinematic),
+        filter var(--trans-duration) var(--ease-cinematic),
+        visibility 0s linear var(--trans-duration);
+    will-change: transform, opacity, filter;
+    box-sizing: border-box;
+}
+
+.slide-item.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    filter: blur(0px);
+    transform: scale(1) translateY(0);
+    transition: opacity var(--trans-duration) var(--ease-cinematic),
+        transform var(--trans-duration) var(--ease-cinematic),
+        filter var(--trans-duration) var(--ease-cinematic),
+        visibility 0s;
+}
+
+.slide-item.prev-slide {
+    transform: scale(1.03) translateY(-16px);
+    opacity: 0;
+    filter: blur(6px);
+}
+
+/* Split Stage Layout */
+.split-stage {
+    display: grid;
+    grid-template-columns: 1fr 1.08fr;
+    height: 100%;
+    padding: 0 !important;
+    position: relative;
+}
+
+.split-text-pane {
+    padding: 80px 60px 80px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
+}
+
+.split-media-pane {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.split-media-pane::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #060608 0%, rgba(6, 6, 8, 0.4) 40%, rgba(6, 6, 8, 0.15) 100%);
+    pointer-events: none;
+}
+
+/* Hero Curator Box (Slide 1) */
+.hero-curator-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(18, 18, 24, 0.7);
+    border: var(--glass-border-gold);
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    backdrop-filter: var(--glass-blur);
+    margin-top: 2rem;
+    box-shadow: var(--shadow-elevated);
+}
+
+.hero-curator-box img {
+    height: 38px;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
+}
+
+.curator-text-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.curator-subtitle {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold-400);
+    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.curator-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    letter-spacing: 3.5px;
+    font-size: 1.12rem;
+    color: #FFFFFF;
+}
+
+/* Slide 2: Credibility Showcase Carousel Layout */
+.credibility-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 24px;
+    margin-top: 1.4rem;
+    align-items: stretch;
+}
+
+.credibility-carousel {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: var(--glass-border);
+    background: #000;
+    box-shadow: var(--shadow-elevated);
+    display: flex;
+    flex-direction: column;
+}
+
+.credibility-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+}
+
+.credibility-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s var(--ease-cinematic);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+}
+
+.credibility-slide.active {
+    opacity: 1;
+}
+
+.credibility-overlay {
+    background: linear-gradient(0deg, rgba(6, 6, 8, 0.95) 0%, rgba(6, 6, 8, 0.4) 60%, transparent 100%);
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.credibility-caption {
+    position: relative;
+    z-index: 2;
+}
+
+.credibility-caption h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--gold-300);
+    margin-bottom: 4px;
+}
+
+.credibility-caption p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+}
+
+/* =========================================================
+   Slide 3: Anubhav Tripathi Showstopper Profile (3D Depth Reel & Hero Identity)
+   ========================================================= */
+.slide-showstopper-premium {
+    padding: 68px 75px 68px 75px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.showstopper-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.showstopper-identity-row {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    margin: 2px 0;
+}
+
+.showstopper-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.3rem;
+    line-height: 1.02;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #FFFFFF 15%, #F5ECC8 55%, var(--gold-400) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.showstopper-hero-designation {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--gold-400);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-left: 2px solid rgba(212, 175, 55, 0.4);
+    padding-left: 14px;
+    line-height: 1;
+    display: inline-block;
+}
+
+.showstopper-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Center Dominant Media Stage */
+.showstopper-main-stage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    flex: 1;
+    min-height: 330px;
+    max-height: 385px;
+    margin: 10px 0;
+    align-items: stretch;
+}
+
+.showstopper-video-cinema {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1.5px solid rgba(212, 175, 55, 0.45);
+    background: #000;
+    box-shadow: var(--shadow-elevated), 0 0 45px rgba(212, 175, 55, 0.25);
+    height: 100%;
+    display: flex;
+}
+
+.showstopper-video-cinema video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-bottom-caption {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* 3D Layered-Depth Photo Carousel Stage */
+.showstopper-3d-stage {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1.5px solid rgba(212, 175, 55, 0.45);
+    background: #05040a;
+    box-shadow: var(--shadow-elevated), 0 0 45px rgba(212, 175, 55, 0.22);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.showstopper-3d-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+
+.depth-card {
+    position: absolute;
+    width: 290px;
+    height: 350px;
+    max-height: 94%;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #0c0a14;
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.85);
+    transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.85s ease, filter 0.85s ease, border-color 0.85s ease, box-shadow 0.85s ease;
+    user-select: none;
+}
+
+.depth-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.depth-card.card-active {
+    transform: translate3d(0, 0, 100px) scale(1.05);
+    opacity: 1;
+    filter: blur(0px) brightness(1);
+    z-index: 10;
+    border-color: var(--gold-400);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.95), 0 0 35px rgba(212, 175, 55, 0.45);
+}
+
+.depth-card.card-prev-1 {
+    transform: translate3d(-125px, 0, -25px) rotateY(18deg) scale(0.9);
+    opacity: 0.7;
+    filter: blur(1.5px) brightness(0.7);
+    z-index: 8;
+}
+
+.depth-card.card-next-1 {
+    transform: translate3d(125px, 0, -25px) rotateY(-18deg) scale(0.9);
+    opacity: 0.7;
+    filter: blur(1.5px) brightness(0.7);
+    z-index: 8;
+}
+
+.depth-card.card-prev-2 {
+    transform: translate3d(-215px, 0, -75px) rotateY(28deg) scale(0.78);
+    opacity: 0.4;
+    filter: blur(3px) brightness(0.5);
+    z-index: 5;
+}
+
+.depth-card.card-next-2 {
+    transform: translate3d(215px, 0, -75px) rotateY(-28deg) scale(0.78);
+    opacity: 0.4;
+    filter: blur(3px) brightness(0.5);
+    z-index: 5;
+}
+
+.depth-card.card-hidden {
+    transform: translate3d(0, 0, -150px) scale(0.5);
+    opacity: 0;
+    filter: blur(6px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.depth-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(6, 6, 8, 0.92) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 12px 14px;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.depth-tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--gold-400);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--gold-hairline);
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 3px;
+}
+
+.depth-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+
+/* Instagram 11M Zoom Frame */
+.insta-zoom-frame {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.insta-zoomable-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-origin: 8% 130%;
+    transition: transform 1.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.depth-card.instagram-zoomed .insta-zoomable-img {
+    transform: scale(1.3);
+}
+
+.depth-card.instagram-zoomed .insta-overlay {
+    opacity: 0.80;
+}
+
+.viral-reach-highlight {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(135deg, #E1306C 0%, #F56040 100%);
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(225, 48, 108, 0.6);
+    opacity: 0;
+    transform: translateY(-8px) scale(0.88);
+    transition: opacity 0.45s ease 1.25s, transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) 1.25s;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.depth-card.instagram-zoomed .viral-reach-highlight {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.depth-dots {
+    position: absolute;
+    bottom: 8px;
+    display: flex;
+    gap: 6px;
+    z-index: 20;
+}
+
+.depth-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease;
+}
+
+.depth-dot.active {
+    background: var(--gold-400);
+    transform: scale(1.4);
+    box-shadow: 0 0 6px var(--gold-glow);
+}
+
+/* Bottom Credibility Bar */
+.showstopper-bottom-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(14, 14, 20, 0.75);
+    border: var(--glass-border-gold);
+    border-radius: var(--radius-md);
+    padding: 10px 24px;
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow-subtle);
+}
+
+.bottom-metric-group {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.bottom-huge-stat {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+    background: linear-gradient(135deg, #FFFFFF 20%, var(--gold-300) 65%, var(--gold-500) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.bottom-metric-text {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.stat-plus {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--gold-400);
+}
+
+.stat-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.84rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--gold-300);
+    margin-left: 2px;
+}
+
+.bottom-bar-sep {
+    width: 1px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0 12px;
+}
+
+.bottom-categories-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 0.8px;
+}
+
+.cat-pill {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cat-sep {
+    color: var(--gold-500);
+    font-size: 0.65rem;
+}
+
+.bottom-proof-pills {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.proof-micro-pill {
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid var(--gold-hairline);
+    color: var(--gold-300);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    font-size: 0.72rem;
+    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Slide 4: Demographic Audience Photo Cards */
+.demographics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 1.6rem;
+}
+
+.demographic-card {
+    background: var(--bg-card);
+    border: var(--glass-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    backdrop-filter: var(--glass-blur);
+    transition: all 0.35s var(--ease-cinematic);
+    display: flex;
+    flex-direction: column;
+}
+
+.demographic-card:hover {
+    border-color: var(--gold-hairline);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-elevated);
+}
+
+.demographic-img {
+    width: 100%;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.demographic-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(18, 18, 24, 0.95) 100%);
+}
+
+.demographic-body {
+    padding: 14px 16px 18px 16px;
+    flex: 1;
+}
+
+.demographic-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--gold-300);
+    margin-bottom: 6px;
+}
+
+.demographic-body p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Slide 5: Marketing Timeline & Poster Frame (Large Prominent Sponsor Poster) */
+.marketing-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 32px;
+    margin-top: 0.8rem;
+    align-items: center;
+    max-height: calc(100vh - 200px);
+}
+
+.timeline-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--bg-card);
+    border: var(--glass-border);
+    padding: 9px 13px;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.timeline-item:hover {
+    border-color: var(--gold-hairline);
+    background: var(--bg-card-hover);
+    transform: translateX(3px);
+}
+
+.timeline-icon {
+    font-size: 1.15rem;
+    color: var(--gold-400);
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.timeline-item strong {
+    font-size: 0.86rem;
+    color: var(--gold-300);
+    display: block;
+}
+
+.timeline-item p {
+    font-size: 0.76rem;
+    color: var(--text-secondary);
+    line-height: 1.35;
+    margin-top: 2px;
+}
+
+.poster-preview-card {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 2px solid rgba(212, 175, 55, 0.45);
+    background: #000;
+    box-shadow: var(--shadow-elevated), 0 0 50px rgba(212, 175, 55, 0.28);
+    height: 480px;
+    max-height: min(64vh, 520px);
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px;
+    transition: all 0.35s var(--ease-smooth);
+}
+
+.poster-preview-card:hover {
+    border-color: var(--gold-400);
+    box-shadow: var(--shadow-elevated), 0 0 65px rgba(212, 175, 55, 0.4);
+    transform: scale(1.02);
+}
+
+.sponsor-empty-callout {
+    background: rgba(6, 6, 8, 0.94);
+    backdrop-filter: blur(16px);
+    border: 2px dashed var(--gold-400);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9);
+}
+
+.callout-lead {
+    color: var(--gold-300);
+    font-size: 0.84rem;
+    font-weight: 800;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 1px;
+}
+
+.callout-sub {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+}
+
+/* Slide 6: Brand Visibility 360 Grid */
+.visibility-container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 26px;
+    margin-top: 1.4rem;
+    align-items: center;
+}
+
+.visibility-hero-badge {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(121, 40, 202, 0.15) 100%);
+    border: var(--glass-border-gold);
+    border-radius: var(--radius-md);
+    padding: 30px;
+    box-shadow: var(--shadow-gold);
+}
+
+.visibility-list-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* Slide 7: Industry Category Cards */
+.industry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 1.6rem;
+}
+
+.industry-card {
+    background: var(--bg-card);
+    border: var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 20px 16px;
+    text-align: center;
+    transition: all 0.3s var(--ease-cinematic);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.industry-card:hover {
+    border-color: var(--gold-500);
+    background: var(--bg-card-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+.industry-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid var(--gold-hairline);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--gold-300);
+}
+
+.industry-card span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #FFFFFF;
+}
+
+/* Slide 8: Partnership Tiers */
+.tier-card-lead {
+    border: 2px solid var(--gold-500) !important;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(18, 18, 24, 0.88) 100%) !important;
+    transform: scale(1.03);
+    box-shadow: var(--shadow-gold), 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+.tier-badge-pill {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold-300) 0%, var(--gold-500) 100%);
+    color: #05040a;
+    font-size: 0.68rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Space Grotesk', sans-serif;
+}

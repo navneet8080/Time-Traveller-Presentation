@@ -1,0 +1,170 @@
+/* =========================================================
+   MEDIA, VIDEO FRAMES & RESPONSIVE BREAKPOINTS
+   ========================================================= */
+
+/* Cinematic Video Frames */
+.video-cinema-frame {
+    position: relative;
+    background: #000;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    box-shadow: var(--shadow-elevated), 0 0 40px rgba(212, 175, 55, 0.15);
+    aspect-ratio: 16/9;
+    transition: all 0.4s var(--ease-cinematic);
+}
+
+.video-cinema-frame:hover {
+    border-color: var(--gold-500);
+    box-shadow: var(--shadow-elevated), 0 0 50px rgba(212, 175, 55, 0.3);
+}
+
+.video-cinema-element {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-cinema-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.75) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.video-cinema-overlay.playing-hidden {
+    opacity: 0;
+}
+
+.video-cinema-tag {
+    align-self: flex-start;
+    background: rgba(10, 8, 18, 0.85);
+    border: 1px solid var(--gold-500);
+    color: var(--gold-300);
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 30px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-family: 'Space Grotesk', sans-serif;
+    backdrop-filter: blur(10px);
+}
+
+.video-cinema-play {
+    pointer-events: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-300) 0%, var(--gold-500) 100%);
+    color: #05040a;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+    transition: all 0.3s var(--ease-cinematic);
+}
+
+.video-cinema-play:hover {
+    transform: translate(-50%, -50%) scale(1.12);
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.8);
+    background: #FFFFFF;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1100px) {
+    .slide-item, .slide-showstopper-premium {
+        padding: 70px 36px 75px 36px !important;
+    }
+    h1.slide-title-hero {
+        font-size: 2.8rem;
+    }
+    .showstopper-hero-title {
+        font-size: 2.7rem;
+    }
+    h2.slide-heading {
+        font-size: 2.2rem;
+    }
+    .grid-layout-3, .grid-layout-4, .industry-grid, .demographics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .split-stage {
+        grid-template-columns: 1fr;
+    }
+    .split-media-pane {
+        display: none;
+    }
+    .credibility-grid, .marketing-grid, .visibility-container {
+        grid-template-columns: 1fr;
+    }
+    .showstopper-main-stage {
+        min-height: 280px;
+        max-height: 340px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slide-item, .slide-showstopper-premium {
+        padding: 60px 16px 70px 16px !important;
+    }
+    .top-navbar {
+        left: 16px;
+        right: 16px;
+        top: 12px;
+    }
+    .brand-title {
+        display: none;
+    }
+    .bottom-nav-strip {
+        padding: 0 16px;
+        height: 56px;
+    }
+    .nav-strip-brand-text {
+        display: none;
+    }
+    .nav-strip-divider {
+        display: none;
+    }
+    .nav-strip-cur-title {
+        display: none;
+    }
+    .right-nav-dock {
+        display: none;
+    }
+    .grid-layout-2, .grid-layout-3, .grid-layout-4, .industry-grid, .demographics-grid {
+        grid-template-columns: 1fr;
+    }
+    .showstopper-hero-title {
+        font-size: 2rem;
+    }
+    .showstopper-main-stage {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        max-height: none;
+        gap: 16px;
+    }
+    .showstopper-video-cinema, .showstopper-photo-showcase {
+        height: 220px;
+    }
+    .showstopper-bottom-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .bottom-bar-sep {
+        display: none;
+    }
+}
