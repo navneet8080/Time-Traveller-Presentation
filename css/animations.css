@@ -16,7 +16,7 @@
 /* Ken Burns Slow Cinematic Zoom for Photography */
 .media-kenburns {
     position: absolute;
-    inset: -10px;
+    inset: -4px;
     background-size: cover;
     background-position: center;
     animation: kenBurnsZoom 18s alternate infinite ease-in-out;
