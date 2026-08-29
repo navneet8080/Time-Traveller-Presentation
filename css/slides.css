@@ -72,20 +72,44 @@
 .split-media-pane {
     position: relative;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 60px 80px 20px;
+    box-sizing: border-box;
     overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    margin: 28px 28px 28px 0;
-    border-radius: 18px;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
 }
 
 .split-media-pane::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, #060608 0%, rgba(6, 6, 8, 0.25) 35%, rgba(6, 6, 8, 0.08) 100%);
-    pointer-events: none;
+    display: none;
+}
+
+/* Slide 1: Fully contained, unclipped poster card maintaining exact 4:5 aspect ratio */
+.split-media-pane .media-kenburns {
+    position: relative;
+    inset: auto;
+    width: auto;
+    height: 100%;
+    max-height: calc(100vh - 160px);
+    max-width: 100%;
+    aspect-ratio: 1080 / 1350;
+    border-radius: var(--radius-md);
+    border: 2px solid rgba(212, 175, 55, 0.45);
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: var(--shadow-elevated), 0 0 50px rgba(212, 175, 55, 0.28);
+    animation: none;
+    overflow: hidden;
+    min-height: 0;
+    min-width: 0;
+    transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth);
+}
+
+.split-media-pane .media-kenburns:hover {
+    border-color: var(--gold-400);
+    box-shadow: var(--shadow-elevated), 0 0 65px rgba(212, 175, 55, 0.4);
+    transform: scale(1.015);
 }
 
 /* Hero Curator Box (Slide 1) */
@@ -646,26 +670,26 @@
 /* Slide 5: Marketing Timeline & Poster Frame (Large Prominent Sponsor Poster) */
 .marketing-grid {
     display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: 32px;
-    margin-top: 0.8rem;
+    grid-template-columns: 0.92fr 1.08fr;
+    gap: 120px;
+    margin-top: -3rem;
     align-items: center;
-    max-height: calc(100vh - 200px);
+    max-height: calc(100vh - 190px);
 }
 
 .timeline-stack {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .timeline-item {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
+    gap: 14px;
     background: var(--bg-card);
     border: var(--glass-border);
-    padding: 9px 13px;
+    padding: 11px 15px;
     border-radius: var(--radius-sm);
     transition: all 0.3s var(--ease-smooth);
 }
@@ -677,22 +701,22 @@
 }
 
 .timeline-icon {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: var(--gold-400);
     flex-shrink: 0;
     margin-top: 1px;
 }
 
 .timeline-item strong {
-    font-size: 0.86rem;
+    font-size: 0.9rem;
     color: var(--gold-300);
     display: block;
 }
 
 .timeline-item p {
-    font-size: 0.76rem;
+    font-size: 0.78rem;
     color: var(--text-secondary);
-    line-height: 1.35;
+    line-height: 1.38;
     margin-top: 2px;
 }
 
@@ -703,10 +727,11 @@
     border: 2px solid rgba(212, 175, 55, 0.45);
     background: #000;
     box-shadow: var(--shadow-elevated), 0 0 50px rgba(212, 175, 55, 0.28);
-    height: 480px;
-    max-height: min(64vh, 520px);
+    height: 700px;
+    max-height: min(72vh, 580px);
     width: 100%;
-    max-width: 420px;
+    max-width: 470px;
+    aspect-ratio: 1080 / 1350;
     margin: 0 auto;
     background-size: cover;
     background-position: top center;

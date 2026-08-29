@@ -78,6 +78,10 @@ export function manageMediaPlayback(activeSlide) {
    Slide 2: Credibility Carousel Logic
    ========================================================= */
 function initCredibilityCarousel() {
+    resetCredibilityCarousel();
+}
+
+function resetCredibilityCarousel() {
     const slides = $$('.credibility-slide');
     if (slides.length === 0) return;
     slides.forEach((s, idx) => s.classList.toggle('active', idx === 0));
@@ -85,6 +89,7 @@ function initCredibilityCarousel() {
 
 function startCredibilityCarousel() {
     stopCredibilityCarousel();
+    resetCredibilityCarousel();
     const slides = $$('.credibility-slide');
     if (slides.length <= 1) return;
     let cur = 0;
@@ -101,6 +106,7 @@ function stopCredibilityCarousel() {
         clearInterval(credibilityTimer);
         credibilityTimer = null;
     }
+    resetCredibilityCarousel();
 }
 
 /* =========================================================
