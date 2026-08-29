@@ -185,7 +185,7 @@
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: opacity 0.6s var(--ease-cinematic);
+    transition: opacity 0.8s var(--ease-cinematic);
     background-size: cover;
     background-position: center;
     display: flex;
