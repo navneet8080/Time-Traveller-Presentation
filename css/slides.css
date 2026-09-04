@@ -1090,3 +1090,239 @@
     padding: 3px 12px;
     border-radius: var(--radius-full);
 }
+
+/* =========================================================
+   Slide 9 & Slide 10: Tiered Partnership Cards (3-Pillar Layout)
+   ========================================================= */
+.partner-tier-card {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.06) 0%, rgba(14, 14, 20, 0.96) 100%);
+    border: 1.5px solid rgba(212, 175, 55, 0.35);
+    border-radius: var(--radius-md);
+    padding: 18px 24px;
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow-elevated), 0 15px 40px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.partner-tier-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold-400) 50%, transparent 100%);
+}
+
+.partner-card-official {
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: var(--shadow-elevated), 0 0 30px rgba(212, 175, 55, 0.12);
+}
+
+.community-tier-card {
+    border-color: rgba(212, 175, 55, 0.22);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.02) 0%, rgba(12, 12, 18, 0.96) 100%);
+    box-shadow: var(--shadow-elevated);
+}
+
+.tier-hero-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.tier-hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.tier-positioning-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.tier-accent-tag {
+    color: var(--gold-300);
+    font-weight: 800;
+}
+
+.tier-hero-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* 3 Major Visual Benefit Pillars */
+.tier-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.tier-pillar-card {
+    background: rgba(18, 18, 24, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.tier-pillar-card:hover {
+    border-color: var(--gold-hairline);
+    background: rgba(212, 175, 55, 0.06);
+    transform: translateY(-2px);
+}
+
+.tier-pillar-card-highlight {
+    border-color: rgba(212, 175, 55, 0.3);
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.08) 0%, rgba(18, 18, 24, 0.85) 100%);
+}
+
+.tier-pillar-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tier-pillar-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--gold-400);
+    background: rgba(212, 175, 55, 0.14);
+    border: 1px solid var(--gold-hairline);
+    border-radius: 4px;
+    padding: 2px 6px;
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.tier-pillar-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: var(--gold-300);
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.tier-pillar-desc {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.42;
+    margin: 0;
+}
+
+/* Compact Included Benefits Box */
+.tier-included-box {
+    background: rgba(8, 8, 12, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-sm);
+    padding: 9px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tier-included-heading {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: var(--gold-400);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.tier-included-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px 14px;
+}
+
+.tier-included-item {
+    font-size: 0.75rem;
+    color: rgba(240, 240, 250, 0.85);
+    line-height: 1.35;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tier-included-item .check-icon {
+    color: var(--gold-400);
+    font-size: 0.74rem;
+    flex-shrink: 0;
+}
+
+/* Footer Row: Ideal For & CTA */
+.tier-footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+    gap: 20px;
+}
+
+.tier-footer-note {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.38;
+    flex: 1;
+}
+
+.tier-footer-note span {
+    color: var(--gold-300);
+    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.tier-footer-cta {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.74rem;
+    font-weight: 800;
+    color: var(--gold-300);
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid var(--gold-hairline);
+    padding: 6px 15px;
+    border-radius: var(--radius-full);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.tier-footer-cta:hover {
+    background: rgba(212, 175, 55, 0.22);
+    border-color: var(--gold-400);
+    color: #FFFFFF;
+}
+
+@media (max-width: 1100px) {
+    .tier-pillars-grid {
+        grid-template-columns: 1fr;
+    }
+    .tier-included-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
